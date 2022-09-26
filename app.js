@@ -25,7 +25,7 @@ var csrfProtection = csrf()
 var indexRouter = require('./routes/index');
 //mongodb+srv://dumsani:aCCysqyflJmPlG29@cluster0.jruhp.mongodb.net/mongoDB?retryWrites=true&w=majority
 //mongodb://localhost:27017/shopping
-mongoClient.connect('mongodb://localhost:27017/shopping',{  
+mongoClient.connect('mongodb+srv://dumsani:aCCysqyflJmPlG29@cluster0.jruhp.mongodb.net/mongoDB?retryWrites=true&w=majority',{  
   useUnifiedTopology: true,
    useNewUrlParser: true
 }).then(() =>{
