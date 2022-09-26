@@ -1,0 +1,117 @@
+ <!-- Page Header Start -->
+    <div class="page-header" style="background: url(assets/img/2.jpg);">
+      <div class="container">
+        <div class="row">         
+          <div class="col-md-12">
+            <div class="breadcrumb-wrapper">
+		
+              <h2 class="page-title">{{headin}}</h2>
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page Header End --> 
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li class="active"><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+	
+    </ul>
+	
+	<ul id = "myTab" class = "nav nav-tabs descNavigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+
+<!--Contact Us Form start-->
+<div class="page-header" style="background:#E6E6FA;">
+<div class="container">
+            <div class="row">
+			
+                <div class="col-md-6 col-md-offset-3">
+							   
+            <div class="page-login-form thumbnail" style = "padding:15px;">
+			     {{#if emailSuccess}} 
+					 <div class = "alert alert-success" alert-dismissable style = "border-radius:4px;>
+					     <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+					     <i class = "lnr lnr-checkmark-circle"></i>  Email was successfully sent.</p>
+					 </div>	
+			     {{/if}}
+			   
+				 {{#if emailError}} 
+				     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;>
+						 <p class= "pull-right"><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+						 <i class = "lnr lnr-cross-circle"></i>  Could not send email.</p>
+					 </div>	
+				 {{/if}}
+						 
+                    <form action = "/email" role="form" class="login-form" method = "post">
+					
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class = "form-group">
+								     <div class = "input-icon">
+									     <i class = "lnr lnr-user"></i>
+                                         <input name="name" type="text" class="form-control" id="name" placeholder="Your name" required>
+                                     </div>
+								</div>
+                            </div>
+							
+							
+                            <div class="col-md-6">
+                                 <div class = "form-group">
+								     <div class = "input-icon">
+									     <i class = "lnr lnr-envelope"></i>
+                                         <input name = "email" type="email" class="form-control" id="email" placeholder="Your email" required>
+                                     </div>
+								 </div>	 
+                            </div>
+							
+							
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Write message..." required></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+								    <input type = "hidden" name = "_csrf" value = "{{csrfToken}}">
+                                    <button class="btn btn-common log-btn">Submit Message</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+					</div>
+                </div>
+            </div>
+			</div>
+       
+ </div>
+ 
+ <ul id = "myTab" class = "nav nav-tabs navigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+	
+	
+	
+	
+ <ul id = "myTab" class = "nav nav-tabs descNavigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Affection</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li class="active"><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+ 

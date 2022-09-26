@@ -1,0 +1,113 @@
+ <!-- Page Header Start -->
+ <div class="page-header" style="background: url(assets/img/2.jpg);">
+      <div class="container">
+        <div class="row">         
+          <div class="col-md-12">
+            <div class="breadcrumb-wrapper">
+              <h2 class="page-title">{{headin}}</h2>
+			</div>
+          </div>
+        </div>
+      </div>
+ </div>
+    <!-- Page Header End -->
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+	
+    </ul>
+	
+	<ul id = "myTab" class = "nav nav-tabs descNavigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+<div style="background:#E6E6FA">
+    <div class="container">		
+		 <div class = "formContainer">
+		    <h3 class="section-title"><small>{{result}}</small></h3>
+			<div class="row">
+				 <div class = "col-sm-12 col-md-6">
+			    <div class = "tru-product">
+				     <img src = "{{product.imagePath}}" alt = "" class = "img-responsive">
+			    </div>		 
+			</div>
+			 <div class = "col-sm-12 col-md-6">
+				    <table class = "table table-condensed">
+						<tr> 
+						<th>Product: </th>
+							 <td><i class = "lnr lnr-leaf"></i><strong style = "color: #006400; font-size:20px;"> {{product.title}}</strong></td>
+						</tr> 
+						
+						<tr> 
+						<th>Category: </th>
+							 <td>{{product.category}}</td>
+						</tr> 
+						
+						<tr> 
+						<th>Description: </th>
+							 <td>{{product.description}}</td>
+						</tr> 
+						
+						<tr>
+							<th>Price:</th>
+							<td><strong>SZL: {{product.price}}</strong></td>
+						</tr>
+						
+						<tr>
+							<th>Volume:</th>
+							<td>{{product.volume}}</td>
+						</tr>
+						
+						
+						
+						<tr>
+							<th>Solution[s]:</th>
+							     <td>
+							     {{#each descArray}}
+							         <span class = "badge" style = "margin-top:5px;">{{this}}</span>
+							     {{/each}}
+							     </td>
+						</tr>
+						
+						<tr>
+						 <th>Instructions:</th>
+							<td">		      
+								 <td>{{product.instructions}}</td>
+							</td>
+						 </tr>
+						 
+						
+			    </table>  
+
+             <a href = "/add-to-cart/{{product._id}}" class="btn btn-common-description center-block"><i class = "lnr lnr-cart"></i> Add To Cart</a>				
+	         
+			</div>	
+	</div>
+	
+			</div>			
+		</div>
+    </div>
+</div>
+
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+
+<ul id = "myTab" class = "nav nav-tabs descNavigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>

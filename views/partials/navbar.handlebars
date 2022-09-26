@@ -1,0 +1,93 @@
+ <!-- Header Section Start -->
+    <div class="header">    
+      <nav class="navbar navbar-default main-navigation" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Stat Toggle Nav Link For Mobiles -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  
+              
+            </button>
+            <!-- End Toggle Nav Link For Mobiles  href="/home"> -->
+            <a href = "/"><h1 class="logowording"><img src="assets/img/logo.png"></h1></a>
+          </div>
+		  
+          <!-- brand and toggle menu for mobile End -->
+		  
+          <!-- Navbar Start -->
+		  <form action = "/logout" method = "post">
+          <div class="collapse navbar-collapse" id="navbar">
+		  
+            <ul class="nav navbar-nav navbar-right borderWrap">
+			        <li><a href="/about-us"><i class=""></i> <strong>About Us</strong></a></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/"><i class = "lnr lnr-home"></i> Home</a></span></li>	
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/dashboard"><i class = "lnr lnr-user"></i> Your Profile</a></span></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></span></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></span></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></span></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:16px;"><a href = "/traditional-doctors"><i class = "lnr lnr-magic-wand"></i> Bogogo</a></span></li>
+					<li style = "font-weight:600;"><span class = "navi" style = "margin-bottom:10px;"><a href = "/contact"> <i class = "lnr lnr-envelope"></i> Contact Us</a></span></li> 
+			  {{#if login}}
+			  <li style = "font-weight:600;"><a href="/dashboard"><strong>ID:</strong> {{session.sessionUser.email}}</a></li> 
+			  {{/if}}
+			  <li style = "font-weight:600;"><a href="/shopping-cart" data-toggle = "tooltip" title = "View Your Item List" data-placement = "bottom"><i class="lnr lnr-cart"></i>Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+			  
+			  <li class = "dropdown" style = "font-weight:600;">
+			    <a href = "/dashboard" class = "dropdown-toggle" data-toggle = "dropdown">
+			     <i class = "lnr lnr-user"></i>User Account
+				 <b class="caret"></b>
+				</a>
+				
+				<ul class = "dropdown-menu">
+				     {{#if login}}
+					<li><a href="/logout"><i class="lnr lnr-enter"></i> Logout</a></li>
+					<li><a type = "submit" href="/dashboard"><i class="lnr lnr-user"></i>User Profile</a></li>
+					 {{else}}
+					 	 <li><a href="/signin"><i class="lnr lnr-enter"></i> Login</a></li>
+					<li><a type = "submit" href="signup"><i class="lnr lnr-pencil"></i> Create Account</a></li>
+					 {{/if}}
+				</ul>
+				
+				<li class="postadd">
+                     <a class="btn btn-danger btn-post" href="signup"><span class="fa fa-plus-circle"></span> Register</a>
+ 			    </li>
+				</div>
+            </ul>
+          <!-- Navbar End -->
+        </div>
+		</form>
+</nav>
+<div class = "navigation">
+	  <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
+		  <!--- Off Canvas Side Menu -->
+			<div class="close" data-toggle="offcanvas" data-target=".navmenu">
+				<i class="lnr lnr-cross"></i>
+			</div>
+			  <h3 class="title-menu">All Pages</h3>
+			  <ul class="nav navmenu-nav"> <!--- Menu -->
+				<li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+				<li><a href="/about-us"><i class=""></i> About Us</a></li>
+				<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Your Profile</a></li>
+				<li><a href = "/contact"> <i class = "lnr lnr-envelope"></i> Contacts Us</a></li>
+				<li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+				<li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+				<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	            <li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+				<li><a href="/shopping-cart" data-toggle = "tooltip" title = "View Your Item List" data-placement = "bottom"><i class="lnr lnr-cart"></i> Shopping Cart<span class = "badge"> {{session.cart.totalQty}}</span></a></li>
+			   
+			</ul><!--- End Menu -->
+		  </div> <!--- End Off Canvas Side Menu -->
+		  <div class="tbtn wow" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
+			<p><i class="lnr lnr-menu-circle"></i> All Pages</p>
+		  </div>
+	</div>
+</div>
+
+
+
+	  
+	  

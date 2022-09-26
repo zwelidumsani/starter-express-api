@@ -1,0 +1,132 @@
+ 
+  <!-- Page Header Start -->
+    <div class="page-header" style="background: url(assets/img/2.jpg);">
+      <div class="container">
+        <div class="row">         
+          <div class="col-md-12">
+            <div class="breadcrumb-wrapper">
+              <h2 class="page-title">{{headin}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page Header End -->
+		<ul id = "myTab" class = "nav nav-tabs navigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+	
+    </ul>
+	
+	<ul id = "myTab" class = "nav nav-tabs descNavigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+	
+	<!-- Content section Start --> 
+    <section id="content" style="background:#E6E6FA">
+      <div class="container">
+        <div class="row">
+		
+          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <div class="page-login-form thumbnail" style= "padding: 15px; margin-top: 20px;">
+            
+			
+			<br>
+			
+			  {{#if hasErrors}}
+			     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;"> 
+				     {{#each messages}}
+					     <p><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+				         <i class= "lnr lnr-warning"></i> {{this}}.</p>
+					 {{/each}}
+				 </div> 
+			 {{/if}} 
+			
+			{{#if unmatchedPasswords}}
+				<div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;"> 
+					<p><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+					<i class= "lnr lnr-warning"></i> Passwords do <strong>NOT</strong> match!</p>
+				</div>
+			{{/if}}	
+				
+              <form action = "/signup" role="form" class="login-form" method = "post">
+<!--			  
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-user"></i>
+                    <input type="text" id="sender-email" class="form-control" name="username" placeholder="Username" required>
+                  </div>
+                </div> 
+-->				
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lnr lnr-smartphone"></i>
+                    <input type="text" id="cellNummber" class="form-control" placeholder="Cell Number" name = "username" required>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-unlock-alt"></i>
+                    <input type="password" class="form-control" placeholder="Password" name = "password"  id = "password" required>
+                  </div>
+                </div> 
+				 <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-key"></i>
+                    <input type="password" class="form-control" placeholder="Re-enter password" name = "passwordTwo"  id = "passwordTwo" required>
+                  </div>
+                </div> 
+<!--				
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-unlock-alt"></i>
+                    <input type="password" class="form-control" placeholder="Retype Password" name = "password2" required>
+                  </div>
+                </div>
+				
+				<div class = "upload">
+                     <div id="drop"> 
+					     <label for="remember">Upload Image</label>
+				         <input type="file" accept="image/*" id="fieldPhoto" name="photo"> 
+				     </div>		  
+                </div>
+-->			
+                <div style= "color:#FF0000;">
+			     {{error}}
+			    </div>	
+				<input type = "hidden" name = "_csrf" value = "{{csrfToken}}">
+                <br>
+                <button class="btn btn-common log-btn">Register</button>
+              </form>
+			 		<hr>
+            </div>
+			 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content section End --> 
+	
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+	<ul id = "myTab" class = "nav nav-tabs descNavigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Relations</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>

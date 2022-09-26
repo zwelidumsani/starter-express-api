@@ -1,0 +1,178 @@
+ <!-- Start intro section -->
+    <section id="intro" class="section-intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="main-text">
+            <h1 class="intro-title"><span style="color: #3498DB;"><span style = "color: #44f134;">ESWATINI HERBAL SOLUTIONS</span></span></h1>
+            <p class="sub-title">We sell African traditional medicine to treat sicknesses and to resolve spiritual or ancestral problems. You can now make an online <strong>order</strong>. Join us today by creating an account so as to be granted access to our platform. Registration is free of charge.<br> 
+                                 		                                                                                                             
+		     COVID-19 Cases in Eswatini <a target="_blank" href = "https://www.worldometers.info/coronavirus/country/swaziland/"><span class = "label label-success">View Statistics</span></a></p>
+			     {{#if login}}
+				     <a href = "/dashboard"><button class="btn btn-common btn-search pull-center"><strong><i class = "lnr lnr-cart"></i>My Orders</strong></button></a>
+			     {{else}}
+				     <a href = "/signin"><button class="btn btn-common btn-search pull-center"><strong><i class = "lnr lnr-cart"></i>Order Now</strong></button></a>
+			    {{/if}} 
+				
+            <!-- End Search box -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end intro section -->
+	
+    <div id="categories-homepage featured-lis" style="background:#E6E6FA; margin-bottom:-55px;"> 
+        <div class="container">
+            <div class="row">
+		        <div class="col-md-12 wow fadeIn" data-wow-delay="0.5s" id= "slide">
+                    <h3 class="section-title" style = "color:grey">OUR TRENDING PRODUCTS</h3>
+                    <div id="new-products" >
+					{{#each products}}
+                        <div class="item">
+                            <div class="product-item">
+                                <div class="carousel-thumb">
+                                    <a  href="/product-d/{{this.id}}"><img src="{{this.image}}" alt="Product Image">
+									<br>
+									<h4 style = "font-weight:600;">IMBITA</h4>
+									<ul class = "list-inline">
+									 {{#each summary}}
+										 <li>{{this}}</li>
+										
+									 {{/each}}	 
+									</ul>
+									 <a href="/product-d/{{this.id}}" class="btn btn-common btn-go-to-index center-block" href="/listing" style = "margin-top:10px;"><span class="lnr lnr-leaf"></span> {{this.title}}</a>
+                                </div>  
+                            </div>
+                        </div>
+					{{/each}}
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+<br>
+
+    {{#if accRemoval}}
+	<div class = "modal fade" id= "myModal" tabindex = "-1" role = "dialog" aria-labelledby= "myModalLabel" aria-hidden = "true">
+                    <div class= "modal-dialog">
+	                     <div class="modal-content">
+		                     <div class = "modal-header">
+			                     <button type= "button" class = "close" data-dismiss = "modal" aria-hidden = "true">X</button>
+				                 <h3 style = "color:red" id = "myModalLabel">Account DELETED successfully.</h3>
+			                </div>
+			                <div class ="modal-body">
+
+				             <blockquote>
+				                 <p style = "color:#D3D3D3"> Thank you for working with us. We hope and believe that you had a good experience. Eswatini Herbal Solutions will always be here for you.</i>
+								                              
+				                 <small>Store Manager<cite title="Source Title"> Zwelithini D. Dlamini</small></p>
+				             <blockquote>
+
+			            </div>
+		            </div>
+	            </div>
+      
+	{{/if}}
+	<div class="services">
+        <div class="container">
+		    <h3 class="section-title" style = "margin-bottom:19px;">MORE POWERFUL HERBAL SOLUTIONS</h3>
+            <div class="row" style = "">
+                <div class="col-md-4">
+				    <a href ="/relations">
+						<div class="service-item first-service">
+							<div class="service-icon"></div>
+								<h4>LOVE & ATTRACTION</h4>
+								<p>Our special and delicate herbal mixtures [Tiwasho] are powerful enough to cure failing relationships, marriages, friendships, family desputes and a lot more.</p> 
+						</div>                               
+					</a>	
+                </div>
+				
+                <div class="col-md-4">
+				     <a href ="wealth">
+						<div class="service-item second-service">
+						   <div class="service-icon"></div>
+							<h4>WEALTH & SUCCESS</h4>
+							<p>We are also in possesion of more herbal mixtures which can be used for achieving luck, business success, successful gambling, money, power and respect.</p>
+                               
+						</div>
+					</a>	
+                </div>
+				
+                <div class="col-md-4">
+				    <a href ="/treatment">
+						<div class="service-item third-service">
+							<div class="service-icon"></div>
+							<h4>HERBAL NUTRITION</h4>
+							<p> No matter how severe your illness, we can still treat or even cure it. Our traditional herbal medicine is capable of healing all kinds of illnesses. Just try us today.</p>
+						</div>
+					</a>	
+                </div>
+			</div>
+				 <div style="text-align:center; padding-top: 20px; padding-bottom:20px;">
+					  <a href = "/traditional-doctors"><button class="btn btn-common btn-search pull-center"><strong>Bogogo lesinabo</strong></button></a>
+                 </div>
+		 </div>
+     </div>
+	
+		
+		<div class = "" style = "background: linear-gradient(rgba(255,255,255,255), rgba(255,255,255,0.1)), url(assets/img/sangoma_big.jpg); background-repeat: no-repeat; background-position: center;">
+        <div class="container">
+		    <h3 class="section-title" style = "margin-bottom: 12px"><span style = "text-decoration:underline"; >Bogogo</span> bakhona Uma Ufuna lusito Lolungetulu</h3>
+            <div class="row" style = "margin-bottom:60px;">
+                <div class="col-md-4 space">
+						<div class="">
+								<h4 style = "padding-bottom:5px">SUSA EMABHADI/ Remove bad luck</h4>
+								
+								<p>Uva shengatsi unemabhadi. Konkhe lokutsintsako akuphumeleli. Kumbe wavalwa. Utawgezwa kusuke sinyama nemabhadi tonkhe tinhlanhla takho tibuye kuwe.</p> 
+								   
+						</div> 
+                </div>
+				
+                <div class="col-md-4 space" style = "padding-bottom: 5px">
+						<div class="">
+							<h4 style = "padding-bottom:5px">TFOLA UMSEBENTI/ Get hired</h4>
+							<p>Sewuhambe lonkhe lelive solo ufuna umsebenti kepha solo awuwutfoli. Fika noma ukhulume na gogo utositakala ekutfoleni umsebenti ngekushesha nje.</p>
+							   
+                               
+						</div>
+						
+                </div>
+				
+					<div class="col-md-4 space devider">
+							<div class="">
+								<h4 style = "padding-bottom:5px">KHIPHA SICITFO/ Jinx removing</h4>
+								<p> Awtsandzeki, unesidzina, nesichefe netintfo atikuhambeli kahle soze une rash emtimbeni. Vele unesicitfo ke. Gogo angakugeza siphume ibuye imphilo ichichime emphilweni yakho.</p>
+								    
+							</div>
+					</div>
+				
+				
+					<div class="col-md-4 space">
+							<div class="">
+									<h4 style = "padding-bottom:5px;">KHUSHULWA ESIKHUNDLENI/ Get promotions</h4>
+									<p>Sowuhleli esikhundleni sinye sikhatsi lesindze. Ufisile kukhushulelwa etulu kute kucace kutsi nembala uya embili impela. Lukhona lusito nalapho gogo solo ukubite njalo.</p> 
+									   
+							</div> 
+					</div>
+					
+					<div class="col-md-4 space">
+							<div class="">
+								<h4 style = "padding-bottom:5px">LUTSANDVO/ Fix your affair</h4>
+								<p>Yibayinganwa, sonywa madvodza lanemali, shada, yenta wakakho abuke wena kuphela nalokunyenti. Konkhe kuyenteka futsi labanengi basitakele nawe ungasitakala.</p>
+								   
+								   
+							</div>	
+					</div>
+					
+					<div class="col-md-4 space">
+							<div class="">
+								<h5 style = "padding-bottom:5px">INHLANHLA YEMALI/ Money drawing</h5>
+								<p> Notsa, akubelula kwakha imali kuwe, yidvonse ekugembuleni, kulotsandzana nabo, ebhizinisini, nakuphi nakuphi. Fika kugogo akugeze akwente i (magnet) ledvonsa imali kuyo yonkhe indzawo nakulonabo.</p>
+								    
+							</div>
+					</div>
+			</div>
+            </div>
+        </div>
+		
+		
+    </div>

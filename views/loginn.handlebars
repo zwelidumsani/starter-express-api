@@ -1,0 +1,107 @@
+ <!-- Page Header Start -->
+    <div class="page-header" style="background: url(assets/img/2.jpg);">
+      <div class="container">
+        <div class="row">         
+          <div class="col-md-12">
+            <div class="breadcrumb-wrapper">
+              <h2 class="page-title">{{headin}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page Header End -->
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Affection</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+	
+    </ul>
+	
+<!-- Content section Start --> 
+    <section id="content" style="background: #E6E6FA">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-4 col-md-4 col-md-offset-4">
+		 
+            <div class="page-login-form thumbnail" style= "box-shadow: 0 0 9px black; padding:15px; margin-top: 20px;">
+			  
+			
+			 {{#if hasErrors}}
+			     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;"> 
+				     {{#each messages}}
+					     <p><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+				         <i class= "lnr lnr-warning"></i> {{this}}.</p>
+					 {{/each}}
+				 </div> 
+			 {{/if}}
+			 
+			  {{#if timing}}
+			     <div class = "alert alert-danger" alert-dismissable style = "border-radius:4px;">
+					     <p><button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true"><i class = "lnr lnr-cross-circle"></i></button>
+				         <i class= "lnr lnr-warning"></i> Last Attempt. If you fail, Try again after <strong>2</strong> Minutes. <strong>TIME:</strong> <span id="output"></p>
+					
+				 </div>
+			 {{/if}}
+			 
+			
+              <form action = "/signin" role="form" class="login-form" method = "post">
+                <div class="form-group">
+				
+                  <div class="input-icon">
+                    <i class="lnr lnr-smartphone"></i>
+                    <input type="text" id="sender-email" class="form-control" name = "username" placeholder="Cell Number" required>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="icon fa fa-unlock-alt"></i>
+                    <input type="password" class="form-control" placeholder="Password" name = "password" required>
+                  </div>
+                </div>                  
+               <br>
+				 <div style= "color:#FF0000;">
+			     {{error}}
+			    </div>
+				<input type = "hidden" name = "_csrf" value = "{{csrfToken}}">
+                <button class="btn btn-common log-btn">Login</button>
+              </form>
+              <ul class="form-links">
+                <li class="pull-left"><a href="/signup">Don't have an account?</a></li>
+               
+              </ul>
+			  <hr> 			
+            </div>
+			</div>
+        </div>
+      </div>
+    </section>
+    <!-- Content section End -->
+	
+	<ul id = "myTab" class = "nav nav-tabs navigation">
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+	<ul id = "myTab" class = "nav nav-tabs descNavigation">
+     <li><a href = "/"><i class = "lnr lnr-home"></i> Home</a></li>
+	 <li><a href = "/treatment"><i class = "lnr lnr-leaf"></i> Herbal Nutrition</a></li>
+    <li><a href = "/relations"><i class = "lnr lnr-heart"></i> Love & Affection</a></li>
+	<li><a href = "/wealth"><i class = "lnr lnr-diamond"></i> Wealth & Success</a></li>
+	<li><a href = "/traditional-doctors"><i class = " lnr lnr-magic-wand"></i> Bogogo</a></li>
+	<li><a href = "/dashboard"><i class = "lnr lnr-user"></i> Dashboard</a></li>
+	<li><a href = "/contact"><i class = "lnr lnr-envelope"></i> Contact Us</a></li>
+    <li><a href = "/shopping-cart"><i class = "lnr lnr-cart"></i> Your Cart <span class = "badge">{{session.cart.totalQty}}</span></a></li>
+	
+    </ul>
+	
+<script>
+     function updateTime() {
+	 var localTime = new Date();
+     document.getElementById("output").innerHTML = localTime.toUTCString();
+    }
+     setInterval(updateTime, 1000);
+</script>
